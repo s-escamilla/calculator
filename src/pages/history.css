@@ -1,0 +1,10 @@
+*{
+    font-size: xx-large;
+}
+:root{
+    background-color: rgb(67, 50, 110);
+}
+#equation{
+overflow-y: scroll;
+height: 15%;
+}

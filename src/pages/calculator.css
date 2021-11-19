@@ -1,0 +1,86 @@
+:root{
+  background-color: rgba(67, 50, 110) ;
+}
+ion-toolbar.header {
+  --ion-toolbar-background: rgba(100, 82, 145, 255);
+}
+ion-content {
+ height: 100vh;
+ flex: 1;
+}
+ion-content.pad{width: 100%;
+  height: 100vh;
+  display: block !important;
+  overflow: auto;}
+div#total{
+  direction: rtl;
+}
+#value-container{
+  width: 90%;
+  background-color: rgb(67, 50, 110);
+}
+ion-text#value{
+  display: block;
+  color: white;
+  direction: rtl; 
+  overflow: scroll;
+  line-height: 20vh;
+  font-size: 100px;
+  margin-right: auto;
+  
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding-right: 10%;
+  background-color: rgb(67, 50, 110) !important;
+}
+ion-grid.main {
+  background-color: rgba(67, 50, 110, 255);
+  height: 80%;
+  border-top:2px solid white;
+  ;
+  display: block;
+  width: auto;
+padding: 10%;}
+ion-row.cal {
+    padding: 1px;
+}
+ion-row.equal-row{
+  width: 75%;
+}.overlap{
+  width: 75% !important;
+}
+ion-col.key {
+  flex: 1 ;
+  color: white;
+  margin: 4px;
+  width: auto;
+  height: 20%;
+  border-top: 100px;
+  border-radius: 5;
+  --min-height: 0px;
+  --min-width: 0px;
+  font-size: 50px;
+  border-radius: 100px;
+  border-color: white;
+  border-width: 2px;
+  text-align: center;
+  border-style: solid;
+}
+.operand {
+  background-color: rgba(251, 214, 83, 255) !important;
+  border-width: 0 !important;
+  color: rgb(67, 50, 110) !important;
+}
+.clear {
+ border-color: rgba(251, 214, 83, 255);
+}.equal{
+  text-align: center;
+  position: absolute;
+  width: 17% !important;
+  left: 70%;
+  justify-content: center;
+}.zero{
+  flex: 2.5 !important;
+}.period{
+  flex: 1 !important;
+}
