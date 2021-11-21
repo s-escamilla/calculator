@@ -1,10 +1,21 @@
-*{
-    font-size: xx-large;
+.header{
+    font-size:8vh;
+    border-bottom:2px solid white;
 }
 :root{
     background-color: rgb(67, 50, 110);
 }
-#equation{
-overflow-y: scroll;
-height: 15%;
+.left{
+    font-size: 5vh;
+    
+    overflow-x: scroll;
+    float:left !important}
+.right{
+    overflow-x: scroll;
+    font-size: 5vh;
+    float: right !important;
+
+}
+.equation{
+border-top: 2px solid gray;
 }

@@ -1,20 +1,17 @@
 import {
   IonContent,
-  IonGrid,
-  IonRow,
-  IonCol,
   IonPage,
   IonHeader,
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonTitle,
   IonText,
   IonItem,
   IonList,
   IonListHeader,
   IonLabel,
 } from "@ionic/react";
+import './history.css'
 import { historyls } from "./calculator";
 export default function History() {
   return (
@@ -40,7 +37,12 @@ export default function History() {
               return(
                 <IonItem class="equation">
                   <IonLabel class="equation-label">
-                    {equation}
+                    <IonText class="left">
+                      {equation.split("=")[0]}
+                      </IonText><IonText class="right">
+                        {"="+ equation.split("=")[1]
+                        }
+                      </IonText>
                   </IonLabel>
                 </IonItem>)})}
             </IonList>

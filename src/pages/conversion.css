@@ -1,0 +1,35 @@
+ion-content#content{
+    display: block;
+    width: 100%;
+}
+
+ion-input#inputValue{
+border: 1px solid gray;
+padding: 5px;
+margin: 5%;
+margin-right: 10%;
+width: 90%;
+}
+ion-select{
+    background-color: lightgray;
+    margin: 10%;
+    color: black;
+}
+ion-text#text{
+    margin: 10%;
+}ion-item#convert{
+    border-radius: 25px;
+background-color:black;
+    border: 1px solid black;
+padding: 5px;
+margin: 5%;
+margin-right: 10%;
+width: 40%;
+}ion-text#result{
+    text-align: center;
+    border: 1px solid gray;
+padding: 5px;
+margin: 5%;
+margin-right: 10%;
+width: 100%;
+}

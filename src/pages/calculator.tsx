@@ -8,21 +8,16 @@ import {
   IonToolbar,
   IonButtons,
   IonMenuButton,
-  IonTitle,
   IonText,
-  IonItem,
 } from "@ionic/react";
 import "./calculator.css";
 import { useState } from "react";
-import { Prop } from "ionicons/dist/types/stencil-public-runtime";
-import { attachProps } from "@ionic/react/dist/types/components/utils";
-import History from "./history";
 export var historyls: String[] = []
 export default function Calculator() {
   var [currentvalue, updateCurrent] = useState("0");
   var [equation, updateEquation] = useState(["0", "", "0"]);
   var [fontSize, updateFontSize] = useState(100);
-   
+  var [sign,updateSign] = useState("")
   return (
     <IonContent fullscreen>
       <IonPage class="page">
@@ -36,6 +31,7 @@ export default function Calculator() {
 
         <IonContent class="pad" scrollY={false}>
           <IonText id="value-container">
+            <IonText id="sign">{sign}</IonText>
             <IonText id="value" >
               {currentvalue != ""
                 ? currentvalue
@@ -59,7 +55,7 @@ export default function Calculator() {
               </IonCol>
               <IonCol />
               <IonCol
-                class="key calc-button operand"
+                class="key calc-button operand /"
                 onClick={() => {
                   updateEquation([equation[0], "/", equation[2]]);
                   updateFontSize(100)
@@ -70,7 +66,7 @@ export default function Calculator() {
               </IonCol>
 
               <IonCol
-                class="key calc-button operand"
+                class="key calc-button operand X"
                 text-center
                 onClick={() => {
                   updateEquation([equation[0], "*", equation[2]]);
@@ -137,11 +133,11 @@ export default function Calculator() {
               </IonCol>
 
               <IonCol
-                class="calc key operand"
+                class="calc key operand -"
                 text-center
                 onClick={() => {
                   equation[0] == "0"
-                  ? updateEquation(["-", equation[1], equation[2]])
+                  ? updateEquation(["- ", equation[1], equation[2]])
                   : (updateEquation([equation[0], "-", equation[2]]));
                   
                 }
@@ -206,7 +202,7 @@ export default function Calculator() {
               </IonCol>
 
               <IonCol
-                class="key operand"
+                class="key operand +"
                 text-center
                 onClick={() => {
                   updateEquation([equation[0], "+", equation[2]]);

@@ -3,6 +3,7 @@ import { IonReactRouter } from "@ionic/react-router";
 import { Redirect, Route } from "react-router-dom";
 import Menu from "./components/Menu";
 
+import Conversion from "./pages/conversion";
 import History from "./pages/history";
 import Calculator from "./pages/calculator";/* Core CSS required for Ionic components to work properly */
 import "@ionic/react/css/core.css";
@@ -22,7 +23,6 @@ import "@ionic/react/css/display.css";
 
 /* Theme variables */
 import "./theme/variables.css";
-import { calculator } from "ionicons/icons";
 export const calchistory : string[] = []
 
 const App: React.FC = () => {
@@ -37,7 +37,7 @@ const App: React.FC = () => {
               <Route path="/calculator" component={Calculator} />
               <Calculator />
               <Route path="/history" component={History} />
-              
+              <Route path="/conversion" component={Conversion}/>
             </IonRouterOutlet>
 
         </IonSplitPane>
